@@ -16,6 +16,9 @@
         "mockery/mockery": "0.9.*",
         "phpunit/phpunit": "~5.7"
     },
+    "dependencies": {
+        "bootstrap-sass": "^3.0.0"
+    },
     "autoload": {
         "classmap": [
             "database"

@@ -17,13 +17,10 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::group(['middleware' => ['web']], function () {
-    Route::resource('items', 'ItemController');
-});
-
 Route::get('/home', 'HomeController@index')->name('home');
 
-//Route::resource('pengguna', 'PenggunaController');
+Route::resource('api/todos','TodosController');
+Route::get('todoapp','TodoAppController@index');
 
 Route::get('/pengguna','PenggunaController@getIndex');
 Route::get('/pengguna/anyData','PenggunaController@anyData')->name('pengguna.data');
